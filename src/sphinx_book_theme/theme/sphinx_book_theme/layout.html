@@ -79,6 +79,11 @@
             </div>
             <main id="main-content" role="main">
                 {{ super() }}
+                {% block cards %} {% endblock cards %}
+            <!-- Extra block to add script for the comment feature 'utteranc.es' -->
+                {% block moreScripts %}{% endblock moreScripts %}
+            <!-- Extra block to add HTML content and script for the star rating feature -->
+                {% block starRating %}{% endblock starRating %}
             </main>
             <footer class="footer-article noprint">
                 {% include "sections/footer-article.html" %}
